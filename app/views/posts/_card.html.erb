@@ -17,17 +17,29 @@
 
       <dt>Course</dt>
       <!-- Display course_id start -->
-      <dd><%= post.course_id %></dd>
+      <dd>
+        <% if @post.course.present? %>
+          <%= link_to post.course, post.course %>
+        <% end %>
+      </dd>
       <!-- Display course_id end -->
 
       <dt>Poster</dt>
       <!-- Display poster_id start -->
-      <dd><%= post.poster_id %></dd>
+      <dd>
+        <% if @post.poster.present? %>
+          <%= link_to post.poster, post.poster %>
+        <% end %>
+      </dd>
       <!-- Display poster_id end -->
 
       <dt>Professor</dt>
       <!-- Display professor_id start -->
-      <dd><%= post.professor_id %></dd>
+      <dd>
+        <% if @post.professor.present? %>
+          <%= link_to post.professor, post.professor %>
+        <% end %>
+      </dd>
       <!-- Display professor_id end -->
 
     </dl>
