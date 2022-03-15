@@ -10,6 +10,8 @@ class PostResource < ApplicationResource
 
   # Direct associations
 
+  belongs_to :professor
+
   belongs_to :poster,
              resource: UserResource
 
