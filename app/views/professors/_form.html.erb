@@ -1,7 +1,6 @@
 <% was_validated = professor.errors.any? %>
 
 <%= form_with(model: professor, local: true, novalidate: true, class: "mb-3") do |f| %>
-  <!-- Label and input for name start -->
   <div class="form-group">
     <% name_class = "form-control" %>
     <% name_was_invalid = professor.errors.include?(:name) %>
@@ -15,9 +14,7 @@
     <% end %>
 
     <%= f.label :name %>
-    <!-- Input for name start -->
     <%= f.text_field :name, class: name_class, placeholder: "Enter name" %>
-    <!-- Input for name end -->
     <% if name_was_invalid %>
       <% professor.errors.full_messages_for(:name).each do |message| %>
         <div class="invalid-feedback d-flex">
@@ -26,8 +23,6 @@
       <% end %>
     <% end %>
   </div>
-  <!-- Label and input for name end -->
-  <!-- Label and input for profile_url start -->
   <div class="form-group">
     <% profile_url_class = "form-control" %>
     <% profile_url_was_invalid = professor.errors.include?(:profile_url) %>
@@ -41,9 +36,7 @@
     <% end %>
 
     <%= f.label :profile_url %>
-    <!-- Input for profile_url start -->
     <%= f.text_field :profile_url, class: profile_url_class, placeholder: "Enter profile url" %>
-    <!-- Input for profile_url end -->
     <% if profile_url_was_invalid %>
       <% professor.errors.full_messages_for(:profile_url).each do |message| %>
         <div class="invalid-feedback d-flex">
@@ -52,6 +45,5 @@
       <% end %>
     <% end %>
   </div>
-  <!-- Label and input for profile_url end -->
   <%= f.button class: "btn btn-outline-secondary btn-block" %>
 <% end %>
