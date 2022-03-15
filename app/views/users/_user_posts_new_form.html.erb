@@ -1,0 +1,52 @@
+<!-- Form post start -->
+<%= form_with(model: @post, local: true) do |f| %>
+<!-- Form post end -->
+
+  <!-- Label and input for rating start -->
+  <div class="form-group">
+    <%= f.label :rating %>
+
+    <!-- Input for rating start -->
+    <%= f.text_field :rating, class: "form-control" %>
+    <!-- Input for rating end -->
+  </div>
+  <!-- Label and input for rating end -->
+
+  <!-- Label and input for descrption start -->
+  <div class="form-group">
+    <%= f.label :descrption %>
+
+    <!-- Input for descrption start -->
+    <%= f.text_field :descrption, class: "form-control" %>
+    <!-- Input for descrption end -->
+  </div>
+  <!-- Label and input for descrption end -->
+
+  <!-- Label and input for course_id start -->
+  <div class="form-group">
+    <%= f.label :course_id %>
+
+    <!-- Input for course_id start -->
+    <%= f.text_field :course_id, class: "form-control" %>
+    <!-- Input for course_id end -->
+  </div>
+  <!-- Label and input for course_id end -->
+
+  <!-- Label and input for poster_id start -->
+  <!-- Input for poster_id start -->
+  <%= f.hidden_field :poster_id, value: @user.id %>
+  <!-- Input for poster_id end -->
+  <!-- Label and input for poster_id end -->
+
+  <!-- Label and input for professor_id start -->
+  <div class="form-group">
+    <%= f.label :professor_id %>
+
+    <!-- Input for professor_id start -->
+    <%= f.text_field :professor_id, class: "form-control" %>
+    <!-- Input for professor_id end -->
+  </div>
+  <!-- Label and input for professor_id end -->
+
+  <%= f.submit "Create post", class: "btn btn-block btn-outline-secondary" %>
+<% end %>
