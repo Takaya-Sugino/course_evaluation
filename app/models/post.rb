@@ -4,7 +4,7 @@ class Post < ApplicationRecord
   belongs_to :professor
 
   belongs_to :poster,
-             :class_name => "User"
+             class_name: "User"
 
   belongs_to :course
 
@@ -17,5 +17,4 @@ class Post < ApplicationRecord
   def to_s
     rating
   end
-
 end

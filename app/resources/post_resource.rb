@@ -18,5 +18,4 @@ class PostResource < ApplicationResource
   belongs_to :course
 
   # Indirect associations
-
 end

@@ -2,7 +2,7 @@ class Professor < ApplicationRecord
   # Direct associations
 
   has_many   :posts,
-             :dependent => :destroy
+             dependent: :destroy
 
   # Indirect associations
 
@@ -13,5 +13,4 @@ class Professor < ApplicationRecord
   def to_s
     name
   end
-
 end

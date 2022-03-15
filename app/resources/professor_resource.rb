@@ -7,8 +7,7 @@ class ProfessorResource < ApplicationResource
 
   # Direct associations
 
-  has_many   :posts
+  has_many :posts
 
   # Indirect associations
-
 end
