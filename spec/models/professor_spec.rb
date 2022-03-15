@@ -4,6 +4,8 @@ RSpec.describe Professor, type: :model do
   
     describe "Direct Associations" do
 
+    it { should have_many(:posts) }
+
     end
 
     describe "InDirect Associations" do
