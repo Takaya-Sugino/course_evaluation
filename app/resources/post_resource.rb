@@ -1,0 +1,15 @@
+class PostResource < ApplicationResource
+  attribute :id, :integer, writable: false
+  attribute :created_at, :datetime, writable: false
+  attribute :updated_at, :datetime, writable: false
+  attribute :rating, :string
+  attribute :descrption, :string
+  attribute :course_id, :integer
+  attribute :poster_id, :integer
+  attribute :professor_id, :integer
+
+  # Direct associations
+
+  # Indirect associations
+
+end
